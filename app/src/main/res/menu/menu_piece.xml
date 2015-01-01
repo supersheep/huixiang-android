@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".PieceActivity">
+
+
+    <!-- 搜索, 应该作为动作按钮展示-->
+    <item android:id="@+id/action_search"
+        android:icon="@drawable/ic_launcher"
+        android:title="@string/action_search"
+        app:showAsAction="ifRoom" />
+
+    <!-- 设置, 在溢出菜单中展示 -->
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+</menu>

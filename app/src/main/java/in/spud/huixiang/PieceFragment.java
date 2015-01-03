@@ -72,10 +72,17 @@ public class PieceFragment extends ProgressFragment implements Listener<List<Pie
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-//        mContentView.findViewById(R.id.button_press_me_baby).setOnClickListener(this);
-//        mContentView.findViewById(R.id.button_send).setOnClickListener(this);
 
         mPieceView = (TextView) mContentView.findViewById(R.id.huixiang_piece);
+
+        mPieceView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showNextPiece();
+            }
+        });
+
+
         super.onViewCreated(view, savedInstanceState);
     }
 

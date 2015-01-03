@@ -12,4 +12,17 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tab_setting">设置</string>
     <string name="tab_piece">看看</string>
+
+    <string name="unfav_success">删除成功</string>
+    <string name="unfav_failed">删除收藏失败</string>
+    <string name="unfav_progress">删除收藏中…</string>
+
+
+    <string name="share_intent_title">"请选择分享途径"</string>
+
+    <string-array name="fav_action_list">
+        <item>从收藏中删除</item>
+        <item>分享到微博</item>
+        <item>分享到其他</item>
+    </string-array>
 </resources>

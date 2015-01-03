@@ -17,10 +17,6 @@ import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.TabHost;
-import android.app.ActionBar.Tab;
 
 public class PieceActivity extends ActionBarActivity
 {
@@ -49,9 +45,16 @@ public class PieceActivity extends ActionBarActivity
 
         actionBar.addTab(
                 actionBar.newTab()
-                        .setText(R.string.tab_setting)
-                        .setTabListener(new TabListener<PieceFragment>(this, getString(R.string.tab_setting), SettingFragment.class))
+                .setText("我的")
+                .setTabListener(new TabListener<MineFragment>(this, "我的", MineFragment.class))
         );
+
+        actionBar.addTab(
+                actionBar.newTab()
+                        .setText(R.string.tab_setting)
+                        .setTabListener(new TabListener<SettingFragment>(this, getString(R.string.tab_setting), SettingFragment.class))
+        );
+
     }
 
 

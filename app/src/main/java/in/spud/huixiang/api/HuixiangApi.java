@@ -26,13 +26,19 @@ public class HuixiangApi {
         mQueue = requestQueue;
     }
 
-
     public Request getPieces(Response.Listener listener, Response.ErrorListener errorListener){
         PieceRequest req = new PieceRequest(listener, errorListener);
         return mQueue.add(req);
     }
 
+    public Request getFavList(int page, Response.Listener listener, Response.ErrorListener errorListener){
+        FavListRequest req = new FavListRequest(page, listener, errorListener);
+        return mQueue.add(req);
+    }
 
-
+    public Request unfav(long pieceId, Response.Listener listener, Response.ErrorListener errorListener){
+        UnfavRequest req = new UnfavRequest(pieceId, listener, errorListener);
+        return mQueue.add(req);
+    }
 
 }
